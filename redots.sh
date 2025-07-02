@@ -47,7 +47,9 @@ confirm=$(echo "$confirm" | tr '[:upper:]' '[:lower:]')
 
 if [[ "$confirm" == "y" || "$confirm" == "yes" ]]; then
     read -p "Enter commit message: " commit_msg
+    cd /home/ronish/dev/dotfiles/
     git add .
     git commit -m "$commit_msg"
     git push
+    cd -
 fi
