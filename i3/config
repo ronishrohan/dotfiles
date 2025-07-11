@@ -11,6 +11,7 @@
 exec --no-startup-id xfsettingsd
 exec_always --no-startup-id picom --config ~/picom/picom-animations/picom.sample.conf
 exec_always --no-startup-id xinput --set-prop 13 341 -0.8
+exec --no-startup-id "systemctl --user enable xmousepasteblock"
 set $mod Mod4
 
 bindsym $mod+Ctrl+Right workspace next
